@@ -1,8 +1,11 @@
-# ATLAS v2.0 - Advanced Telegram Intelligence System
+# ATLAS v3.0 - Advanced Telegram Intelligence System
 
 **Elite AI-powered intelligence analysis for Telegram channels and groups**
 
 Powered by **Gemini 3 Pro** - The latest Google AI model released in 2025
+
+🆕 **What's New in v3.0:** Advanced Search, User Profiles, Multi-Language Translation, Raw Export
+📖 **See:** [NEW_FEATURES.md](NEW_FEATURES.md) | [CHANGELOG.md](CHANGELOG.md)
 
 ---
 
@@ -17,6 +20,12 @@ Powered by **Gemini 3 Pro** - The latest Google AI model released in 2025
 - **Multi-Channel Comparison** - Compare and contrast multiple sources
 - **Smart Export System** - Export to JSON, CSV, or TXT formats
 - **Long Report Handling** - Automatically splits reports longer than 4000 chars
+
+### 🆕 New in v3.0
+- **Advanced Search & Filtering** - Find specific messages with regex, date range, and user filters
+- **User Profile Analysis** - Comprehensive behavior analysis of individual users
+- **Multi-Language Translation** - Analyze foreign language channels in your language
+- **Raw Data Export** - 10x faster export without AI processing
 
 ---
 
@@ -116,6 +125,82 @@ Get comparative intelligence reports highlighting:
 ```
 
 Stops all active monitoring tasks.
+
+---
+
+### 🆕 Advanced Search
+```
+.search <target> <keyword> [--from @user] [--regex pattern] [--after YYYY-MM-DD] [--limit N]
+```
+
+**Examples:**
+```
+.search @channel crypto
+.search @channel bitcoin --from @john
+.search @channel --regex "\d{3}-\d{3}-\d{4}"
+.search @channel scam --after 2025-01-01 --limit 100
+```
+
+**Features:**
+- Keyword and regex pattern matching
+- Filter by specific users
+- Date range filtering
+- Custom result limits
+
+---
+
+### 🆕 User Profile Analysis
+```
+.profile @username in <target> [limit]
+```
+
+**Examples:**
+```
+.profile @john in @channel 500
+.profile @alice in @community 1000
+```
+
+**Output includes:**
+- Message statistics (count, frequency, active days)
+- Peak activity hours
+- AI behavioral analysis (topics, role, sentiment)
+- Sample recent messages
+
+---
+
+### 🆕 Raw Data Export
+```
+.export-raw <target> [limit] [--format json|csv]
+```
+
+**Examples:**
+```
+.export-raw @channel 1000
+.export-raw @channel 500 --format csv
+```
+
+**Benefits:**
+- 10x faster than AI-powered export
+- No API quota usage
+- Perfect for data backups and external analysis
+
+---
+
+### 🆕 Multi-Language Translation
+```
+.translate <target> <language> [limit]
+```
+
+**Examples:**
+```
+.translate @russian_channel english 100
+.translate @chinese_channel en 200
+```
+
+**Features:**
+- Translate from any language to any language
+- AI analysis in your preferred language
+- Entity extraction with translated names
 
 ---
 
